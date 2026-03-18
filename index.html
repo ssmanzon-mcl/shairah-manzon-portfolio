@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Shairah Nicole S. Manzon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo" onclick="showSection('home')">&lt;S.Manzon/&gt;</div>
+        <div class="nav-links">
+            <a href="javascript:void(0)" id="nav-home" onclick="showSection('home')">Home</a>
+            <a href="javascript:void(0)" id="nav-about" onclick="showSection('about')">About</a>
+            <a href="javascript:void(0)" id="nav-skills" onclick="showSection('skills')">Skills</a>
+            <a href="javascript:void(0)" id="nav-achievements" onclick="showSection('achievements')">Achievements</a>
+            <a href="javascript:void(0)" id="nav-projects" onclick="showSection('projects')">Projects</a>
+            <a href="javascript:void(0)" onclick="toggleSidebar()" class="btn-contact">Contact Me</a>
+        </div>
+    </nav>
+
+    <div id="contactSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        </div>
+        <div class="sidebar-content">
+            <h2 class="sidebar-title">Get in Touch</h2>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>shairahmanzon03@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <p>+63 917 430 2557</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Sta. Rosa, Laguna, Philippines</p>
+            </div>
+            <div class="social-media-section">
+                <p class="social-label">Social Media</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+    <section id="home" class="page-section">
+        <div class="hero">
+            <div class="hero-text hidden-el hidden-left">
+                <h1>Hi, I'm Shairah <br>Nicole Manzon</h1>
+                <h3>Aspiring <span>Software Developer</span></h3>
+                <p class="tagline">Your vision, my code.</p>
+                
+                <div class="hero-btns">
+                    <a href="javascript:void(0)" onclick="showSection('projects')" class="view-work">View my work &rarr;</a>
+                    <a href="Shairah_Manzon_CV.pdf" download="Shairah_Manzon_CV" class="btn-download">Download Resume &rarr;</a>
+                </div>
+            </div>
+            <div class="hero-image-container hidden-el hidden-right">
+                <img src="profile.jpg" alt="Shairah Nicole S. Manzon" class="main-photo">
+                <div class="photo-shadow"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="page-section">
+        <div class="about-flex-container">
+            <div class="about-content-side hidden-el hidden-bottom">
+                <h2 class="about-header hidden-el hidden-top">About Me</h2>
+                <p class="about-paragraph hidden-el hidden-bottom">
+                    I'm <strong>Shairah Nicole S. Manzon</strong>, a 4th-year IT student at Mapúa MCL specializing in Cybersecurity. I am passionate about designing relational databases and implementing secure, cloud-hosted backend integrations.
+                </p>
+                <p class="about-paragraph">
+                    My goal is to apply my expertise in Database Management and information security to build robust, data-driven applications that prioritize integrity and performance.
+                </p>
+                <div class="highlight-boxes">
+                    <div class="h-box hidden-el hidden-bottom delay-100">
+                        <i class="fas fa-cloud"></i>
+                        <h4>Backend & Cloud</h4>
+                        <p>Proficient in Supabase and cloud-hosted backend integration.</p>
+                    </div>
+                    <div class="h-box hidden-el hidden-bottom delay-200">
+                        <i class="fas fa-database"></i>
+                        <h4>Database Management</h4>
+                        <p>Expertise in designing relational databases and ensuring data integrity.</p>
+                    </div>
+                    <div class="h-box hidden-el hidden-bottom delay-300">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Cybersecurity</h4>
+                        <p>Focused on creating secure information environments for modern apps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="page-section">
+        <div class="skills-container">
+            <h2 class="tech-stack-title hidden-el hidden-top">My Tech Stack</h2>
+            <p class="about-paragraph hidden-el hidden-bottom" style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
+                I specialize in front-end web development, creating responsive and visually engaging websites using 
+                <strong>HTML5, CSS3, JavaScript, and React</strong>. I leverage <strong>Supabase</strong> 
+                for backend integration and database management, along with <strong>Git</strong> for version control, 
+                delivering everything from static sites to secure, data-driven applications.
+            </p>
+
+            <div class="detailed-skills-container hidden-el hidden-bottom">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-pills">
+                        <span>Python</span><span>C++</span><span>C#</span><span>Dart</span><span>HTML</span><span>JavaScript</span><span>CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skill-pills">
+                        <span>REST API Integration</span><span>CRUD Operations</span><span>JSON Handling</span><span>Client-Server Communication</span><span>Authentication & Encryption</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database Management</h3>
+                    <div class="skill-pills">
+                        <span>MySQL</span><span>Oracle SQL</span><span>Table Relationships & Normalization</span><span>Foreign Keys & Constraints</span><span>Triggers</span><span>Stored Procedures</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-icons-grid hidden-el hidden-scale" style="margin-top: 60px;">
+                <div class="tech-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"><span>HTML</span></div>
+                <div class="tech-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"><span>CSS</span></div>
+                <div class="tech-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"><span>JavaScript</span></div>
+                <div class="tech-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"><span>React</span></div>
+                <div class="tech-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg"><span>Supabase</span></div>
+                <div class="tech-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"><span>Git</span></div>
+            </div>
+
+            <div class="what-can-i-do-section" style="margin-top: 80px;">
+                <h2 class="tech-stack-title hidden-el hidden-top">What Can I Do</h2>
+                <p class="about-paragraph hidden-el hidden-bottom" style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
+                    I create responsive, visually appealing, and user-friendly websites that combine great design with smooth functionality, turning ideas into fast, engaging digital products.
+                </p>
+                <div class="wcid-grid">
+                    <div class="wcid-card hidden-el hidden-bottom delay-100">
+                        <i class="fas fa-newspaper wcid-icon"></i>
+                        <h3>Static Website Development</h3>
+                        <p>Simple, fast-loading, and lightweight websites perfect for portfolios, landing pages, and business showcases.</p>
+                    </div>
+                    <div class="wcid-card hidden-el hidden-bottom delay-200">
+                        <i class="fas fa-window-maximize wcid-icon"></i>
+                        <h3>Single-Page Applications</h3>
+                        <p>Modern, app-like web experiences built for speed and smooth navigation using the latest frameworks.</p>
+                    </div>
+                    <div class="wcid-card hidden-el hidden-bottom delay-300">
+                        <i class="fas fa-chart-line wcid-icon"></i>
+                        <h3>Website Redesign & Optimization</h3>
+                        <p>Revamping existing sites for better performance, UI/UX, and search visibility to keep your brand fresh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="page-section">
+        <div class="cert-container">
+            <h2 class="section-title hidden-el hidden-top" style="text-align: center; font-size: 2.8rem; font-weight: 800; margin-bottom: 40px;">Achievements & Certifications</h2>
+            <div class="cert-card hidden-el hidden-scale">
+                <h3 class="achieve-subtitle">Honors</h3>
+                <ul class="cert-list">
+                    <li>
+                        <strong>Dean's Lister</strong> | 3rd Year, 1st Term (A.Y. 2024–2025)
+                        <p class="cert-desc">Recognized as Dean's Lister for the 1st term across 1st to 3th year at Mapúa Malayan Colleges Laguna (MMCL), maintaining consistent academic excellence in the BS Information Technology program.</p>
+                    </li>
+                    <li>
+                        <strong>Dean's Lister</strong> | 1st Year, 3rd Term (A.Y. 2022–2023)
+                        <p class="cert-desc">Achieved high academic standing across all core and elective subjects during the freshman year.</p>
+                    </li>
+                </ul>
+                <h3 class="achieve-subtitle" style="margin-top: 30px;">Certificates</h3>
+                <ul class="cert-list">
+                    <li><strong>Google Cloud Skill Boost</strong>: Completed multiple learning paths covering Infrastructure, Security, Data, Machine Learning, and App Development.</li>
+                    <li><strong>TOEIC</strong>: Achieved a score of 805 out of 990 on the TOEIC, demonstrating strong professional English proficiency.</li>
+                    <li><strong>Cisco Certified: Ethical Hacker</strong>: Certification covering cybersecurity principles and penetration testing methodologies.</li>
+                    <li><strong>Introduction to Technical Support | IBM</strong>: Gained foundational knowledge in IT troubleshooting and support systems.</li>
+                    <li><strong>Introduction to Data Analytics | IBM</strong>: Developed core skills in data analysis and the data-driven decision-making process.</li>
+                    <li><strong>Foundations: Data, Data, Everywhere | Google</strong>: Mastered the fundamentals of data exploration and cleaning using modern tools.</li>
+                    <li><strong>Virtualization for Everyone | Pearson</strong>: Learned to create and manage virtual machines and computing environments.</li>
+                    <li><strong>Managing Hybrid Infrastructure and Virtualized Environments | Packt</strong>: Gained expertise in managing virtualized environments within hybrid cloud infrastructures.</li>
+                    <li><strong>AI Summit - Unlocking the Future | JPCS Mapúa MCL</strong>: Participated in high-level discussions regarding the future impact of Artificial Intelligence.</li>
+                    <li><strong>Technopreneurship: A Journey in Building Your Own Tech Start-Up | Prosperna Philippines</strong>: Completed specialized training on building, launching, and scaling tech-driven start-ups.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="page-section">
+        <div class="projects-container">
+            <h2 class="section-title hidden-el hidden-top">Personal Projects</h2>
+            <p class="about-paragraph hidden-el hidden-bottom" style="margin-bottom: 50px;">
+                The following works are <strong>collaborative school projects</strong> developed in coordination with my classmates. These projects reflect our collective effort in applying software development principles, security protocols, and database management to solve real-world academic challenges.
+            </p>
+            
+            <div class="project-item hidden-el hidden-bottom">
+                <h3 class="project-item-title">Dans Cafe Online Platform</h3>
+                <ul class="project-bullet-list">
+                    <li>Developed a full-featured e-commerce web platform specifically for local cafe operations.</li>
+                    <li>Implemented a dynamic menu management system allowing for real-time updates of food and beverage items.</li>
+                    <li>Built an integrated ordering system to streamline the process between customer selection and kitchen preparation.</li>
+                </ul>
+                <div class="project-tech-stack">
+                    <p class="tech-stack-label">TECHNOLOGIES & TOOLS</p>
+                    <div class="tech-pills">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX Design</span>
+                    </div>
+                </div>
+                <a href="https://github.com/hyoono/IT114L-MP-DansCafeOnline" target="_blank" class="github-link">View on GitHub &rarr;</a>
+            </div>
+
+            <div class="project-item hidden-el hidden-bottom">
+                <h3 class="project-item-title">SCAMP Management Application</h3>
+                <ul class="project-bullet-list">
+                    <li>Developed a specialized business management application designed to centralize coffee shop operations, inventory, and sales data.</li>
+                    <li>Optimized order coordination and promo management to improve communication between the cashier and management teams.</li>
+                    <li>Focused on creating a user-friendly interface for both administrators to manage 45+ menu items and customers to access loyalty rewards.</li>
+                </ul>
+                <div class="project-tech-stack">
+                    <p class="tech-stack-label">TECHNOLOGIES & TOOLS</p>
+                    <div class="tech-pills">
+                        <span>Flutter</span><span>Supabase</span><span>Firebase</span>
+                    </div>
+                </div>
+                <a href="https://github.com/JsjordanGit/scamp_application" target="_blank" class="github-link">View on GitHub &rarr;</a>
+            </div>
+
+            <div class="project-item hidden-el hidden-bottom">
+                <h3 class="project-item-title">Financial Prototype System</h3>
+                <ul class="project-bullet-list">
+                    <li>Architected a secure prototype for processing financial transactions and automated ledger updates.</li>
+                    <li>Implemented relational database schemas to ensure strict data integrity and consistency for financial records.</li>
+                    <li>Developed backend logic to handle calculations and secure data transmission.</li>
+                </ul>
+                <div class="project-tech-stack">
+                    <p class="tech-stack-label">TECHNOLOGIES & TOOLS</p>
+                    <div class="tech-pills">
+                        <span>PHP</span><span>MySQL</span><span>Backend Development</span>
+                    </div>
+                </div>
+                <a href="https://github.com/Chalesgo/Financial_prototype" target="_blank" class="github-link">View on GitHub &rarr;</a>
+            </div>
+
+            <div class="project-item hidden-el hidden-bottom">
+                <h3 class="project-item-title">Cryptographic Encryption Suite</h3>
+                <ul class="project-bullet-list">
+                    <li>Developed a security application implementing various encryption algorithms, including Caesar and Kama Sutra ciphers.</li>
+                    <li>Demonstrated advanced logic for data encryption and decryption through string manipulation.</li>
+                    <li>Created an educational tool to visualize how classic cryptographic methods protect information.</li>
+                </ul>
+                <div class="project-tech-stack">
+                    <p class="tech-stack-label">TECHNOLOGIES & TOOLS</p>
+                    <div class="tech-pills">
+                        <span>Python</span><span>Cryptography</span><span>Algorithm Design</span>
+                    </div>
+                </div>
+                <a href="https://github.com/vaughnDungo/DUNGO-OCOMA-MANZON" target="_blank" class="github-link">View on GitHub &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
