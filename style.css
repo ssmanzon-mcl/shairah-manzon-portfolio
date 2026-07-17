@@ -139,6 +139,16 @@ nav {
     text-align: center; 
 }
 
+.about-aumovio-grid {
+    display: block;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    display: none;
+}
+
 .profile-circle { display: none; } 
 .profile-circle img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -240,11 +250,43 @@ nav {
 .cert-card { background: white; border: 3px solid #000; border-radius: 20px; padding: 40px; box-shadow: 10px 10px 0px #000; max-width: 1000px; margin: 0 auto; }
 .achieve-subtitle { font-size: 1.8rem; font-weight: 800; color: #000; border-bottom: 3px solid var(--accent-red); display: inline-block; margin-bottom: 20px; }
 .cert-list { list-style: none; }
-.cert-list li { padding: 15px 0; border-bottom: 1px solid #eee; }
+.cert-list li { padding: 15px 0; border-bottom: 1px solid #eee; font-size: 1.2rem; }
 .cert-list li::before { content: "✓"; margin-right: 15px; color: var(--accent-red); font-weight: 800; }
-.cert-desc { font-size: 0.95rem; color: #666; margin-top: 5px; padding-left: 28px; line-height: 1.4; }
+.cert-desc { font-size: 1.2rem; color: #666; margin-top: 5px; padding-left: 28px; line-height: 1.4; }
 
-/* IMPROVED PROJECTS SPACING */
+/* CAPSULE STYLES FOR VIEW CERTIFICATE BUTTON */
+.view-cert-container {
+    margin-top: 10px;
+    padding-left: 28px;
+}
+.view-cert-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    border: 1.5px solid #2D2D2D;
+    border-radius: 30px; /* Capsule shape mimicking the reference image */
+    text-decoration: none;
+    color: #2D2D2D;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+.view-cert-btn:hover {
+    background-color: var(--accent-red);
+    color: #FFFFFF;
+    border-color: var(--accent-red);
+}
+.view-cert-btn .arrow {
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+.view-cert-btn:hover .arrow {
+    transform: translateX(3px);
+}
+
+/* IMPROVED PROJECTS SPACING WITH LOCKED INLINE HEADER ELEMENTS */
 #projects { 
     padding: 100px 0; 
     text-align: center; 
@@ -252,8 +294,18 @@ nav {
 
 .projects-container { width: 100%; padding: 0 10%; }
 
-.project-item { margin: 0 auto 100px; max-width: 900px; text-align: left; }
-.project-item-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 20px; }
+.project-item { 
+    margin: 0 auto 100px; 
+    max-width: 900px; 
+    text-align: left; 
+    width: 100%; 
+}
+.project-item-title { 
+    font-size: 2.2rem; 
+    font-weight: 800; 
+    margin-bottom: 0; 
+    white-space: nowrap; 
+}
 .project-bullet-list { list-style: none; margin-bottom: 30px; }
 .project-bullet-list li { position: relative; padding-left: 25px; margin-bottom: 10px; font-size: 1.1rem; line-height: 1.6; }
 .project-bullet-list li::before { content: "•"; position: absolute; left: 0; font-weight: 800; color: #000; }
@@ -262,6 +314,57 @@ nav {
 .tech-pills span { background: #555; color: #fff; padding: 6px 18px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; border: 1px solid #000; }
 .github-link { display: inline-block; text-decoration: none; color: #000; font-weight: 800; border-bottom: 2px solid #000; transition: all 0.2s ease; }
 .github-link:hover { color: var(--accent-red); border-bottom-color: var(--accent-red); }
+
+.nature-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 40px;
+}
+
+.nature-cards {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
+.nature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.08);
+}
+
+.nature-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+}
+
+.nature-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+@media (max-width: 950px) {
+    .nature-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.staging-list {
+    list-style: disc;
+    padding-left: 30px;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.staging-list li {
+    margin-bottom: 18px;
+}
 
 /* --- SCROLL ANIMATIONS --- */
 .hidden-el {
