@@ -695,12 +695,11 @@
         });
         </script>
 
-      <div class="project-item hidden-el hidden-bottom">
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; width: 100%;">
-        <h3 class="project-item-title" style="margin-bottom: 0;">Painted Cup Coffee Website and Mobile App</h3>
-        <span style="font-weight: 600; color: #777; font-size: 1rem; white-space: nowrap;">January 2026</span>
-    </div>
-    <ul class="project-bullet-list" style="margin-top: 12px;">
+    <div class="project-item hidden-el hidden-bottom">
+    <h3 class="project-item-title" style="margin-bottom: 8px;">Painted Cup Coffee Website and Mobile App</h3>
+    <p style="font-weight: 600; color: #777; font-size: 1rem; margin: 0 0 16px 0;">January 2026</p>
+    
+    <ul class="project-bullet-list">
         <li>Developed a specialized business management application designed to centralize coffee shop operations, inventory, and sales data.</li>
         <li>Optimized order coordination and promo management to improve communication between the cashier and management teams.</li>
         <li>Focused on creating a user-friendly interface for both administrators to manage 45+ menu items and customers to access loyalty rewards.</li>
@@ -748,7 +747,7 @@
             </div>
 
             <div class="gui-slide" style="display: none; width: 100%;">
-                <img src="Cup4.png" alt="Cup 3" style="width: 100%; max-height: 75vh; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: block; margin: 0 auto;">
+                <img src="Cup4.png" alt="Cup 4" style="width: 100%; max-height: 75vh; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: block; margin: 0 auto;">
                 <p style="margin-top: 12px; margin-bottom: 0; font-size: 1rem; color: #444; font-weight: 600;"></p>
             </div>
 
@@ -756,7 +755,7 @@
             <a href="javascript:void(0)" onclick="changeSlide(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 2.5rem; color: #333; text-decoration: none; font-weight: bold; user-select: none; background: rgba(255,255,255,0.7); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 5;">&#10095;</a>
         </div>
 
-        <div style="margin-top: 15px; font-size: 0.95rem; color: #666; font-weight: 500;" id="slideNum">1 / 3</div>
+        <div style="margin-top: 15px; font-size: 0.95rem; color: #666; font-weight: 500;" id="slideNum">1 / 4</div>
     </div>
 </div>
 
@@ -766,7 +765,7 @@
     align-items: center;
     gap: 8px;
     padding: 10px 20px;
-    border: 1.5px solid #4a3b32; /* Rich dark brown to match coffee theme */
+    border: 1.5px solid #4a3b32;
     border-radius: 30px;
     color: #4a3b32;
     font-weight: 600;
@@ -782,7 +781,6 @@
     transition: transform 0.25s ease;
 }
 
-/* Hover State: Fills with Dark Brown, text becomes White */
 .portfolio-action-btn:hover {
     background-color: #4a3b32;
     color: #fff;
@@ -801,12 +799,12 @@ function openGuiModal() {
     currentSlideIndex = 0;
     showSlide(currentSlideIndex);
     document.getElementById("guiModal").style.display = "flex";
-    document.body.style.overflow = "hidden"; // Stops page scrolling in background
+    document.body.style.overflow = "hidden";
 }
 
 function closeGuiModal() {
     document.getElementById("guiModal").style.display = "none";
-    document.body.style.overflow = "auto"; // Re-enables page scrolling
+    document.body.style.overflow = "auto";
 }
 
 function changeSlide(direction) {
@@ -814,9 +812,9 @@ function changeSlide(direction) {
     currentSlideIndex += direction;
     
     if (currentSlideIndex >= slides.length) {
-        currentSlideIndex = 0; // Loop back to the first slide
+        currentSlideIndex = 0;
     } else if (currentSlideIndex < 0) {
-        currentSlideIndex = slides.length - 1; // Loop back to the last slide
+        currentSlideIndex = slides.length - 1;
     }
     
     showSlide(currentSlideIndex);
@@ -831,7 +829,6 @@ function showSlide(index) {
     document.getElementById("slideNum").innerText = (index + 1) + " / " + slides.length;
 }
 
-// Close the modal if user clicks anywhere outside the actual modal box
 window.addEventListener('click', function(event) {
     var modal = document.getElementById("guiModal");
     if (event.target == modal) {
@@ -839,7 +836,7 @@ window.addEventListener('click', function(event) {
     }
 });
 </script>
-
+        
 <div class="project-item hidden-el hidden-bottom">
     <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 24px; width: 100%;">
         <h3 class="project-item-title" style="margin-bottom: 0;">Mediclock</h3>
